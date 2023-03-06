@@ -7,6 +7,11 @@ CLOCKS mcuClocks;  // System clocks: SYSCLK, AHB, APB1, APB2, APB1_Timer, APB2_T
 
 int main(void)
 {
+  #if defined GD32F3XX
+    // Required due to enabling interrupt after vector table relocation
+    __enable_irq();
+  #endif
+
   SystemClockInit();
 
   SCB->VTOR = VECT_TAB_FLASH;
