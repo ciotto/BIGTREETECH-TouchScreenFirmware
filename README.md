@@ -247,6 +247,9 @@ For **MKS TFTs**:
 3. For MKS TFT35, two binary files are provided:
    1. Encrypted version: Usable on a stock MKS TFT35 (based on a bootloader with encryption)
    2. Unencrypted version: Usable with a bootloader without encryption
+4. For MKS TFT28 that mount GD32 MCU (like the newest version of Genious Pro), you need some more steps:
+   1. rename the right binary (e.g. `MKS_GD_TFT28_V4.0.27.x.bin`) in `mkstft28evo.bin`
+   2. create an empty `mkstft28.bin` file
 
 For example, for BTT TFT35 V3 select:
 
