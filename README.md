@@ -85,9 +85,14 @@ Only the TFTs listed below are currently supported. Trying to install the firmwa
 **MKS TFT**
 
     MKS_TFT28_V3.0 and V4.0
+    MKS_TFT28_NEW_GENIUS
     MKS_TFT32_V1.3 and V1.4
-    MKS_TFT32L_V3_0
-    MKS_TFT35_V1_0
+    MKS_TFT32L_V3.0
+    MKS_TFT35_V1.0
+
+**MKS GD TFT**
+
+    MKS_GD_TFT28_V4.0
 
 **WARNING:** BTT does not officially provide MKS TFT hardware support. MKS TFT is maintained by open source contributors and BTT does not bear any risk of MKS TFT hardware using this firmware.
 
@@ -249,12 +254,12 @@ For **MKS TFTs**:
 
 1. The firmwares use the naming convention `MKS_TFT*_V*.*.*.x.bin`
 2. Any binary file for an MKS firmware (e.g. `MKS_TFT28_V4.0.27.x.bin`) **MUST** be renamed to `MKSTFT*.bin` (e.g. `MKSTFT28.bin`, `MKSTFT35.bin` etc.) in order it can be recognized and installed by the TFT
-3. For MKS TFT35, two binary files are provided:
-   1. Encrypted version: Usable on a stock MKS TFT35 (based on a bootloader with encryption)
-   2. Unencrypted version: Usable with a bootloader without encryption
-4. For MKS TFT28 that mount GD32 MCU (like the newest version of Genious Pro), you need some more steps:
-   1. rename the right binary (e.g. `MKS_GD_TFT28_V4.0.27.x.bin`) in `mkstft28evo.bin`
-   2. create an empty `mkstft28.bin` file
+
+For **MKS GD TFTs**:
+
+For MKS TFT28 mounting GD32 MCU (like the newest version of Genious Pro), you need some more steps:
+1. Rename the right binary (e.g. `MKS_GD_TFT28_V4.0.27.x.bin`) to `mkstft28evo.bin`
+2. Create an empty `mkstft28.bin` file
 
 For example, for BTT TFT35 V3 select:
 
@@ -453,22 +458,39 @@ Please, see [Customization Guides](https://github.com/bigtreetech/BIGTREETECH-To
   <img src="https://user-images.githubusercontent.com/25599056/56637532-77115000-669e-11e9-809b-f6bc25412f75.png"></li>
 
 <li>After opening the project, edit <a href="platformio.ini"><code>platformio.ini</code></a> and change the <code>default_envs</code> to one that matches your TFT model and version:
-<pre>;BIGTREE_TFT35_V1_0
+<pre>;BIGTREE_TFT24_V1_1
+;BIGTREE_TFT28_V1_0
+;BIGTREE_TFT28_V3_0
+;BIGTREE_TFT35_V1_0
 ;BIGTREE_TFT35_V1_1
 ;BIGTREE_TFT35_V1_2
 ;BIGTREE_TFT35_V2_0
 ;BIGTREE_TFT35_V3_0
 ;BIGTREE_TFT35_E3_V3_0
-;BIGTREE_TFT28_V1_0
-;BIGTREE_TFT28_V3_0
-;BIGTREE_TFT24_V1_1
-;MKS_TFT32_V1_3
-;MKS_TFT32_V1_4
-;MKS_TFT32_V1_4_NOBL
+;BIGTREE_TFT35_B1_V3_0
+;BIGTREE_TFT43_V3_0
+;BIGTREE_TFT50_V3_0
+;BIGTREE_TFT70_V3_0
+
+;BIGTREE_GD_TFT24_V1_1
+;BIGTREE_GD_TFT35_V2_0
+;BIGTREE_GD_TFT35_V3_0
+;BIGTREE_GD_TFT35_E3_V3_0
+;BIGTREE_GD_TFT35_B1_V3_0
+;BIGTREE_GD_TFT43_V3_0
+;BIGTREE_GD_TFT50_V3_0
+;BIGTREE_GD_TFT70_V3_0
+
 ;MKS_TFT28_V3_0
 ;MKS_TFT28_V4_0
 ;MKS_TFT28_NEW_GENIUS
+;MKS_TFT32_V1_3
+;MKS_TFT32_V1_4
+;MKS_TFT32_V1_4_NOBL
+;MKS_TFT32L_V3_0
 ;MKS_TFT35_V1_0
+
+;MKS_GD_TFT28_V4_0
 [platformio]
 src_dir      = TFT
 boards_dir   = buildroot/boards

@@ -90,9 +90,8 @@ void InfoHost_HandleOkAck(int16_t target_tx_slots)
 
 int main(void)
 {
-  #if defined GD32F3XX
-    // Required due to enabling interrupt after vector table relocation
-    __enable_irq();
+  #ifdef GD32F3XX
+    __enable_irq();  // required due to enabling interrupt after vector table relocation
   #endif
 
   SystemClockInit();

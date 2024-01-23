@@ -17,13 +17,6 @@
   #define HARDWARE_VERSION "GD_TFT28_V4.0"
 #endif
 
-// USB Disk support
-#ifndef USB_FLASH_DRIVE_SUPPORT
-  #define USB_FLASH_DRIVE_SUPPORT
-  #define USE_USB_FS
-  #define USE_USB_OTG_FS
-#endif
-
 // SERIAL_PORT:   communicating with host (Marlin, RRF etc...)
 // SERIAL_PORT_X: communicating with other controllers (OctoPrint, ESP3D, other UART Touch Screen etc...)
 #ifndef SERIAL_PORT
@@ -35,6 +28,13 @@
   #define USART3_TX_PIN PD8
   #define USART3_RX_PIN PD9
   #define SERIAL_PORT_4 _UART4
+#endif
+
+// USB Disk support
+#ifndef USB_FLASH_DRIVE_SUPPORT
+  #define USB_FLASH_DRIVE_SUPPORT
+  #define USE_USB_FS
+  #define USE_USB_OTG_FS
 #endif
 
 #include "pin_MKS_TFT32_V1_4.h"
