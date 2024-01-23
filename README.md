@@ -491,6 +491,7 @@ Please, see [Customization Guides](https://github.com/bigtreetech/BIGTREETECH-To
 ;MKS_TFT35_V1_0
 
 ;MKS_GD_TFT28_V4_0
+
 [platformio]
 src_dir      = TFT
 boards_dir   = buildroot/boards
