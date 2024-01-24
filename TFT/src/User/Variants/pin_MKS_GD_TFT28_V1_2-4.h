@@ -1,5 +1,5 @@
-#ifndef _PIN_MKS_GD_TFT28_V1_2-4_H_  // modify to actual filename !!!
-#define _PIN_MKS_GD_TFT28_V1_2-4_H_  // modify to actual filename !!!
+#ifndef _PIN_MKS_GD_TFT28_V1_24_H_  // modify to actual filename !!!
+#define _PIN_MKS_GD_TFT28_V1_24_H_  // modify to actual filename !!!
 
 // MCU type (STM32F10x, STM32F2xx, STM32F4xx, gd32f20x, gd32f30x)
 #ifndef MCU_TYPE
@@ -14,7 +14,7 @@
 
 // Hardware version config
 #ifndef HARDWARE_VERSION
-  #define HARDWARE_VERSION "GD_TFT28_V4.0"
+  #define HARDWARE_VERSION "GD_TFT28_V1.2-4"
 #endif
 
 // SERIAL_PORT:   communicating with host (Marlin, RRF etc...)
